@@ -1,0 +1,15 @@
+# 依存パッケージ
+node_modules/
+
+# ビルド成果物
+dist/
+build/
+
+# AIツール・IDEローカル設定
+.agents
+.claude
+.cursor
+.devin
+
+# 環境変数・機密情報
+.env
