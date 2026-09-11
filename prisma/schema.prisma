@@ -1,8 +1,7 @@
-generator client {
-    provider = "prisma-client-js"
+datasource db {
+  provider = "sqlite"
 }
 
-datasource db {
-    provider = "sqlite"
-    
+generator client {
+  provider = "prisma-client-js"
 }

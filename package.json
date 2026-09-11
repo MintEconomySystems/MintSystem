@@ -7,8 +7,7 @@
     "build": "tsc",
     "start": "node build/index.js",
     "buildstart": "tsc && node build/index.js",
-    "command-deploy": "tsc && node build/deploy-commands.js",
-    "postinstall": "prisma skills sync || exit 0"
+    "command-deploy": "tsc && node build/deploy-commands.js"
   },
   "keywords": [],
   "author": "",
@@ -18,12 +17,14 @@
     "@types/express": "^5.0.6",
     "@types/node": "^26.5.0",
     "dotenv": "^17.4.2",
-    "prisma": "^8.0.0-rc.13",
+    "prisma": "^7.10.0",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2"
   },
   "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.10.0",
     "@prisma/client": "^7.10.0",
+    "better-sqlite3": "^13.0.3",
     "express": "^5.2.1"
   }
 }
