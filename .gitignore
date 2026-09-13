@@ -13,3 +13,8 @@ build/
 
 # 環境変数・機密情報
 .env
+
+# データベース（実ファイル）
+dev.db
+*.db
+*.db-journal

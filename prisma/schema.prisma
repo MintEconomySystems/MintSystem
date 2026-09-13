@@ -5,3 +5,38 @@ datasource db {
 generator client {
   provider = "prisma-client-js"
 }
+
+model Balance {
+    accountId String @id
+    points Int @default(0)
+}
+
+model PointLog {
+    id Int @id @default(autoincrement())
+    accountId String
+    amount Int
+    reason String
+    source String?
+    createdAt DateTime @default(now())
+
+    @@index([accountId])
+}
+
+model Account {
+    accountId String @id
+    createdAt DateTime @default(now())
+}
+
+model Identity {
+    scopeId String
+    ownerId String
+    accountId String
+
+    @@id([scopeId, ownerId])
+}
+
+model LinkCode {
+    code String @id
+    accountId String
+    expiresAt DateTime
+}
