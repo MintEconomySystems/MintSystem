@@ -5,6 +5,9 @@ node_modules/
 dist/
 build/
 
+# Prisma生成物
+src/generated/
+
 # AIツール・IDEローカル設定
 .agents
 .claude
